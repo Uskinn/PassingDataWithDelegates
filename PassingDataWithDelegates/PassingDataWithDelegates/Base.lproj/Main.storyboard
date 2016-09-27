@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--ReceivingVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ReceivingVC" customModule="PassingDataWithDelegates" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="75c-vX-f6P">
+                                <rect key="frame" x="-4" y="0.0" width="383" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="MIz-wR-eem"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="ReceivingVC" id="3kd-Uj-WFV">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="PnZ-vI-98y">
+                                            <connections>
+                                                <segue destination="gGX-xZ-gSk" kind="show" identifier="Show" id="uUN-Ga-lZR"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap the &quot;+&quot; button to add and send text using delegates" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HiS-dv-dtX">
+                                <rect key="frame" x="16" y="61" width="343" height="586"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HiS-dv-dtX" firstAttribute="top" secondItem="75c-vX-f6P" secondAttribute="bottom" constant="17" id="3OQ-0n-U8q"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="75c-vX-f6P" secondAttribute="trailing" constant="-20" id="NL2-u7-p0j"/>
+                            <constraint firstItem="75c-vX-f6P" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="PDj-Nd-Buq"/>
+                            <constraint firstItem="HiS-dv-dtX" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="fOJ-zl-nGj"/>
+                            <constraint firstItem="75c-vX-f6P" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="og9-D7-jMh"/>
+                            <constraint firstItem="HiS-dv-dtX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="t5K-Qk-CMB"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="HiS-dv-dtX" secondAttribute="bottom" constant="20" id="yDv-FT-Voh"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="receivingLabel" destination="HiS-dv-dtX" id="lP8-az-cFB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="57.5" y="259.5"/>
+        </scene>
+        <!--Sending View Controller-->
+        <scene sceneID="z3b-OM-fJd">
+            <objects>
+                <viewController id="gGX-xZ-gSk" customClass="SendingViewController" customModule="PassingDataWithDelegates" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eXM-3R-wPG"/>
+                        <viewControllerLayoutGuide type="bottom" id="goC-nD-m7F"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dt5-pu-Ye3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tap to enter some text! 👇" textAlignment="center" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="bOZ-MJ-7Om">
+                                <rect key="frame" x="16" y="70" width="343" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="iac-YX-6Jo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="25"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xy7-OL-tK9">
+                                <rect key="frame" x="16" y="160" width="343" height="67"/>
+                                <color key="backgroundColor" red="0.95047128199999997" green="0.84370972170000003" blue="0.067466170749999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67" id="cOr-Q7-8hh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="25"/>
+                                <state key="normal" title="SEND">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendButtonPressed:" destination="gGX-xZ-gSk" eventType="touchUpInside" id="gAS-UN-04G"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bOZ-MJ-7Om" firstAttribute="leading" secondItem="dt5-pu-Ye3" secondAttribute="leadingMargin" id="4Wb-e4-V4T"/>
+                            <constraint firstItem="xy7-OL-tK9" firstAttribute="top" secondItem="bOZ-MJ-7Om" secondAttribute="bottom" constant="30" id="6t1-ND-933"/>
+                            <constraint firstItem="xy7-OL-tK9" firstAttribute="trailing" secondItem="dt5-pu-Ye3" secondAttribute="trailingMargin" id="Vse-Fi-soz"/>
+                            <constraint firstItem="xy7-OL-tK9" firstAttribute="leading" secondItem="dt5-pu-Ye3" secondAttribute="leadingMargin" id="a0K-E9-UI5"/>
+                            <constraint firstItem="bOZ-MJ-7Om" firstAttribute="top" secondItem="eXM-3R-wPG" secondAttribute="bottom" constant="50" id="hJ0-0c-tw2"/>
+                            <constraint firstItem="bOZ-MJ-7Om" firstAttribute="trailing" secondItem="dt5-pu-Ye3" secondAttribute="trailingMargin" id="ibf-qG-GJs"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="textFieldFilled" destination="bOZ-MJ-7Om" id="uaa-mX-qIg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Dt-ZW-p4M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="493.5" y="259.5"/>
+        </scene>
+    </scenes>
+</document>
